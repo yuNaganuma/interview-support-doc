@@ -1,0 +1,58 @@
+﻿# A5:ER FORMAT:10
+# A5:ER ENCODING:UTF8
+# A5:ER Mk-1 Copyright (C)2007 m.matsubara
+# A5:SQL Mk-2 Copyright (C)1997 m.matsubara
+#  http://www.wind.sannet.ne.jp/m_matsu/developer/a5m2/
+
+[Manager]
+ProjectName=interview-support
+Author=nskint.co.jp
+MaxEntityRowShow=1000
+ReadOnlyRecommend=1
+Page=Main
+PageInfo="Main",2,"A3Landscape",$FFFFFF
+LogicalView=1
+DecodeDomain=0
+ViewModePageIndividually=1
+ViewMode=2
+ViewFormat=0
+UseNondependenceDashLine=0
+FontName=メイリオ
+FontSize=6
+PaperSize=A4Landscape
+HeaderLeft=
+HeaderCenter=
+HeaderRight=
+FooterLeft=
+FooterCenter=
+FooterRight=
+ShowPageoutRelation=1
+RDBMSType=5
+RDBMSTypeName=MySQL
+DefaultPkName=%0:s_PKC
+DefaultPkIndexName=%0:s_PKI
+DefaultIndexName=%0:s_IX%1:d
+DefaultFkName=%0:s_FK%1:d
+SqlSeparator=0
+ShowTag=1
+ShowCommonAttributes=0
+
+[Entity]
+PName=M_USER
+LName=ユーザーマスタ
+Comment=
+TableOption=
+Page=Main
+Left=100
+Top=100
+Field="ID","NO_USER_ID","INT","NOT NULL",0,"","ID",$000000FF,""
+Field="削除フラグ","FG_DELETE","BIT","NOT NULL",,"0","削除フラグ(0:有効状態、1:削除状態)",$00FF0000,""
+Field="作成日","DT_CREATE","DATETIME","NOT NULL",,"","作成日",$00FF0000,""
+Field="作成者","NO_CREATE_USER_ID","INT","NOT NULL",,"","作成者ID",$00FF0000,""
+Field="更新日","DT_UPDATE","DATETIME","NOT NULL",,"","更新日",$00FF0000,""
+Field="更新者","NO_UPDATE_USER_ID","INT","NOT NULL",,"","更新者ID",$00FF0000,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20160707101605
+Position="Main",100,100
