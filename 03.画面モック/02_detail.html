@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>面談アプリ</title>
+<link href="./resource/css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript">
+function disp(){
+
+	// 「OK」時の処理開始 ＋ 確認ダイアログの表示
+	if(window.confirm('削除しますか？')){
+
+		return true;
+	}
+
+	else{
+	// 「キャンセル」時の処理開始
+
+		return false;
+	}
+}
+</script>
+</head>
+<body>
+	<h1>面談アプリ</h1>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="./resource/js/bootstrap.min.js"></script>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<!--		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarEexample">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">タイトル</a>
+		</div>
+-->
+			<div class="collapse navbar-collapse" id="navbarEexample">
+				<ul class="nav navbar-nav">
+					<li><a href="01_list.html">ビジネス基礎チェック表</a></li>
+					<li><a href="#">コーチング表</a></li>
+				</ul>
+				<p class="navbar-text navbar-right">ようこそ 長沼 佑 さん。</p>
+			</div>
+		</div>
+	</nav>
+	<div class="page-header">
+		<h3>ビジネス基礎チェック表 詳細</h3>
+	</div>
+	<ul>
+		<div class="radio">
+			<li> 会社と部の５つのコンテンツを言える 
+			（
+			<label> <input type="radio" id="CHECK_ID_00001" value="option1" disabled="disabled"checked="checked"> ○</label>
+			<label> <input type="radio" id="CHECK_ID_00001" value="option2" disabled="disabled">×</label>
+			<label> <input type="radio" id="CHECK_ID_00001" value="option3" disabled="disabled">△</label>
+			 ） </li>
+		</div>
+		<p>行動4原則（最重点項目）全ての実践ができている</p>
+		<div class="radio">
+			<li> 1．大きな声で 
+			（
+			<label> <input type="radio" name="CHECK_ID_00002" value="option1" disabled="disabled"checked="checked"> ○</label>
+			<label> <input type="radio" name="CHECK_ID_00002" value="option2" disabled="disabled">×</label>
+			<label> <input type="radio" name="CHECK_ID_00002" value="option3" disabled="disabled">△</label>
+			 ） </li>
+		</div>
+		<div class="radio">
+			<li> 2．きびきび行動
+			（
+			<label> <input type="radio" name="CHECK_ID_00003" value="option1" disabled="disabled"checked="checked"> ○</label>
+			<label> <input type="radio" name="CHECK_ID_00003" value="option2" disabled="disabled">×</label>
+			<label> <input type="radio" name="CHECK_ID_00003" value="option3" disabled="disabled">△</label>
+			 ） </li>
+		</div>
+		<div class="radio">
+			<li> 3．自分から挨拶 
+			（
+			<label> <input type="radio" name="CHECK_ID_00004" value="option1" disabled="disabled"checked="checked"> ○</label>
+			<label> <input type="radio" name="CHECK_ID_00004" value="option2" disabled="disabled">×</label>
+			<label> <input type="radio" name="CHECK_ID_00004" value="option3" disabled="disabled">△</label>
+			 ） </li>
+		</div>
+		<div class="radio">
+			<li> 4．明るい笑顔 
+			（
+			<label> <input type="radio" name="CHECK_ID_00005" value="option1" disabled="disabled"checked="checked"> ○</label>
+			<label> <input type="radio" name="CHECK_ID_00005" value="option2" disabled="disabled">×</label>
+			<label> <input type="radio" name="CHECK_ID_00005" value="option3" disabled="disabled">△</label>
+			 ） </li>
+		</div>
+	</ul>
+	<form action="03_edit.html">
+		<button type="submit" class="btn btn-success">編集</button>
+	</form>
+	<form action="01_list.html" onSubmit="return disp()">
+		<button type="submit" class="btn btn-danger" >削除</button>
+	</form>
+</body>
+</html>
