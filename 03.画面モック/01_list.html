@@ -1,96 +1,147 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>面談アプリ</title>
-<link href="./resource/css/bootstrap.min.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>面談アプリ</title>
+	<link href="./resource/css/bootstrap.min.css" rel="stylesheet">
+	<style rel="stylesheet">
+		body {
+			margin-top: 70px;
+			margin-bottom: 60px;
+		}
+	</style>
 </head>
 <body>
-	<h1>面談アプリ</h1>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="./resource/js/bootstrap.min.js"></script>
 
-	<nav class="navbar navbar-inverse">
-	<div class="container-fluid">
-<!--		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarEexample">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">タイトル</a>
+	<!-- Header -->
+	<nav id="header" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+
+			<!-- スマートフォンサイズで表示されるメニューボタンとテキスト -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<!-- タイトルなどのテキスト -->
+				<a class="navbar-brand" href="#">面談アプリ</a>
+
+			</div>
+
+			<!-- グローバルナビの中身 -->
+			<div class="collapse navbar-collapse" id="nav-menu">
+
+				<!-- 各ナビゲーションメニュー -->
+				<ul class="nav navbar-nav">
+
+					<!-- 通常のリンク -->
+					<li class="active"><a href="01_list.html">ビジネス基礎チェック表</a></li>
+					<li><a href="#">コーチング表</a></li>
+				</ul>
+				<p class="navbar-text navbar-right">ようこそ <a href="#" class="navbar-link">長沼 佑</a> さん</p>
+
+			</div>
 		</div>
--->		
-		<div class="collapse navbar-collapse" id="navbarEexample">
-			<ul class="nav navbar-nav">
-				<li><a href="01_list.html">ビジネス基礎チェック表</a></li>
-				<li><a href="#">コーチング表</a></li>
+	</nav>
+
+	<!-- Body -->
+	<div id="body" class="container-fluid">
+
+		<!-- ページタイトル -->
+		<div class="page-header">
+			<h2>ビジネス基礎チェック表 一覧</h2>
+		</div>
+		
+		<!-- 検索条件 -->
+		<div class="row-fluid">
+			<form class="form-inline" action="#">
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">更新者</span>
+							<select class="form-control" id="InputSelect">
+								<option>鈴木 徹</option>
+								<option>古屋 景子</option>
+								<option>長沼 佑</option>
+						</select>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-default">検索</button>
+			</form>
+		</div>
+		
+		<!-- ページャ -->
+		<div class="row-fluid pull-right">
+			<ul class="pagination">
+				<li class="active disable"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
 			</ul>
-			<p class="navbar-text navbar-right">ようこそ 長沼 佑 さん。</p>
 		</div>
-	</div>
-</nav>
-<div class="page-header">
-	<h3>ビジネス基礎チェック表　一覧</h3>
-</div>
-<form class="form-inline" action="#">
-	<div class="form-group">
-		<div class="input-group">
-			<span class="input-group-addon">更新者</span>
-			<select class="form-control" id="InputSelect">
-				<option>鈴木 徹</option>
-				<option>古屋 景子</option>
-				<option>長沼 佑</option>
-			</select>
+
+		<!-- 一覧 -->
+		<div class="row-fluid">
+			<table class="table table-bordered table-hover">
+				<thead>
+					<tr>
+						<th>チェック表ID</th>
+						<th>更新日時▼</th>
+						<th>更新者</th>
+						<th>チェック結果 <img src="./resource/image/circle.jpg"> / <img src="./resource/image/triangle.jpg"> / <img src="./resource/image/x-mark.jpg"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="02_detail.html">0000000001</a></td>
+						<td>2016/7/11 20:00:00</td>
+						<td>鈴木 徹</td>
+						<td>15/	 7/	 8</td>
+					</tr>
+					<tr>
+						<td><a href="02_detail.html">0000000002</a></td>
+						<td>2016/7/11 19:00:00</td>
+						<td>古屋 景子</td>
+						<td>14/	 8/	 8</td>
+					</tr>
+					<tr>
+						<td><a href="02_detail.html">0000000003</a></td>
+						<td>2016/7/11 18:00:00</td>
+						<td>長沼 佑</td>
+						<td>12/	 9/	 9</td>
+					</tr>
+					<tr>
+						<td><a href="02_detail.html">0000000004</a></td>
+						<td>2016/7/11 17:00:00</td>
+						<td>長沼 佑</td>
+						<td>11/	 9/	10</td>
+					</tr>
+					<tr>
+						<td><a href="02_detail.html">0000000005</a></td>
+						<td>2016/7/11 16:00:00</td>
+						<td>長沼 佑</td>
+						<td>10/	10/	10</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
+		
+		<!-- ボタン -->
+		<form id="">
+			<div class="pull-right">
+				<button type="submit" class="btn btn-primary btn-lg" formaction="./03_edit.html" >登録</button>
+			</div>
+		</form>
 	</div>
-	<button type="submit" class="btn btn-default">検索</button>
-</form>
-<br>
-	<table class="table table-bordered table-hover">
-		<thead>
-			<tr>
-				<th>チェック表ID</th>
-				<th>更新日時▼</th>
-				<th>更新者</th>
-				<th>チェック結果　○ / × / △</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><a href="02_detail.html">0000000001</a></td>
-				<td>2016/7/11 20:00:00</td>
-				<td>鈴木 徹</td>
-				<td>15/	 7/	 8</td>
-			</tr>
-			<tr>
-				<td><a href="02_detail.html">0000000002</a></td>
-				<td>2016/7/11 19:00:00</td>
-				<td>古屋 景子</td>
-				<td>14/	 8/	 8</td>
-			</tr>
-			<tr>
-				<td><a href="02_detail.html">0000000003</a></td>
-				<td>2016/7/11 18:00:00</td>
-				<td>長沼 佑</td>
-				<td>12/	 9/	 9</td>
-			</tr>
-			<tr>
-				<td><a href="02_detail.html">0000000004</a></td>
-				<td>2016/7/11 17:00:00</td>
-				<td>長沼 佑</td>
-				<td>11/	 9/	10</td>
-			</tr>
-			<tr>
-				<td><a href="02_detail.html">0000000005</a></td>
-				<td>2016/7/11 16:00:00</td>
-				<td>長沼 佑</td>
-				<td>10/	10/	10</td>
-			</tr>
-		</tbody>
-	</table>
+	
+	<!-- Footer -->
+	<div id="footer">
+	</div>
+
 </body>
 </html>
